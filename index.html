@@ -119,7 +119,7 @@ p {
 <!-- Big Background Heart -->
 <div id="bgHeart">💗</div>
 
-<h1>To Bhautik 💖 ggg</h1>
+<h1>To Bhautik 💖</h1>
 <p>You are my shiny days.. ✨</p>
 <p>Forever yours,</p>
 <p><strong>Nidhi 💕</strong></p>
@@ -127,20 +127,24 @@ p {
 <!-- Big Heart in Center -->
 <div id="bigHeart">💗</div>
 
-<!-- Audio -->
 <!-- SoundCloud Stream Embed -->
+<div id="musicContainer" style="display:none;">
 <iframe width="100%" height="166" 
 src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/zhoukeyu-sc/bitter-bitter-sweet&amp;color=%23ff66b3&amp;auto_play=true&amp;hide_related=true" 
 frameborder="0" allow="autoplay"></iframe>
+</div>
 
+<!-- Play Button -->
+<button id="playBtn">Play Music 🎵</button>
 
 <script>
-// Play music on button click (fixes autoplay issues)
-const music = document.getElementById("bgMusic");
+// Show music iframe on click
 const playBtn = document.getElementById("playBtn");
+const musicContainer = document.getElementById("musicContainer");
+
 playBtn.addEventListener("click", () => {
-    music.play();
-    playBtn.style.display = "none"; // hide button after play
+    musicContainer.style.display = "block";
+    playBtn.style.display = "none"; // hide button
 });
 
 // Small Hearts
